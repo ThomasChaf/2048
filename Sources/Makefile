@@ -2,10 +2,6 @@ CC=		gcc
 
 BINARY=		../2048.app/Contents/MacOS
 
-ROOT=		/Users/chafiol/Documents/Projets/2048-Objet/Sources
-
-LIBRARY=	$(ROOT)/Library
-
 SRC_DIR=	Sources
 
 SRC=	$(SRC_DIR)/main.c \
@@ -18,9 +14,9 @@ SRC=	$(SRC_DIR)/main.c \
 
 OBJ=		$(SRC:.c=.o)
 
-CFLAGS=		-Wall -Werror -W -Wextra -I$(ROOT)/includes -I$(LIBRARY) -I$(LIBRARY)/Modulary
+CFLAGS=		-Wall -Werror -W -Wextra -I./includes
 
-LDFLAGS=	-L$(LIBRARY)/Modulary -lmod -F/Library/Frameworks -framework SDL2 -framework SDL2_ttf
+LDFLAGS=	-lmod -framework SDL2 -framework SDL2_ttf
 
 NAME=		$(BINARY)/2048
 
