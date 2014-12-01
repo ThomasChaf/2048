@@ -1,1 +1,5 @@
 *.o
+Sources/Library/*
+*.save
+*.dmg
+*.log
